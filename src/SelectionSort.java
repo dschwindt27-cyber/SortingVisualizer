@@ -27,10 +27,20 @@ public class SelectionSort implements SortAlgorithm {
     @Override
     public String getName() { return "Selection Sort"; }
 
-
     @Override
     public void sort(SortArray arr) {
         // TODO: write selection sort here
-
+        int n = arr.size();
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr.less(j, minIndex)) {
+                    minIndex = j;
+                }
+            }
+            if (minIndex != i) {
+                arr.swap(i, minIndex);
+            }
+        }
     }
 }

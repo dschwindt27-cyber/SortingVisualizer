@@ -34,7 +34,12 @@ public class InsertionSort implements SortAlgorithm {
 
     @Override
     public void sort(SortArray arr) {
-
+        int n = arr.size();
+        for (int i = 1; i < n; i++) {
+            for (int j = i; j > 0 && arr.less(j, j - 1); j--) {
+                arr.swap(j, j - 1);
+            }
+        }
     }
 
 }
