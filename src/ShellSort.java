@@ -24,7 +24,7 @@
  *   1. Run insertion sort and shell sort on the same Random data with n = 50 and 100.
  *      How do the comparison counts compare?
  *   2. Try a different gap sequence (e.g. n/2, n/4, ..., 1). Is it better or worse?
- *   3. Is shell sort stable? Test with "Few unique values".
+ *   3. Is shell sort stable? Test with "Few unique values"..
  */
 public class ShellSort implements SortAlgorithm {
 
