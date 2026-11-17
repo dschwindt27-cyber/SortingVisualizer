@@ -41,6 +41,7 @@ public class SelectionSort implements SortAlgorithm {
             if (minIndex != i) {
                 arr.swap(i, minIndex);
             }
+            arr.mark("i=" + i);
         }
     }
 }

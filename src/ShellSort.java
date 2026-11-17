@@ -46,6 +46,7 @@ public class ShellSort implements SortAlgorithm {
                 }
             }
             h = h / 3;
+            arr.mark("h=" + h);
         }
     }
 }

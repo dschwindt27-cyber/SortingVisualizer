@@ -39,6 +39,7 @@ public class InsertionSort implements SortAlgorithm {
             for (int j = i; j > 0 && arr.less(j, j - 1); j--) {
                 arr.swap(j, j - 1);
             }
+            arr.mark("i=" + i);
         }
     }
 
