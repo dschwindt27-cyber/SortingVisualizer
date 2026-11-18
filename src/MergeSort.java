@@ -72,5 +72,6 @@ public class MergeSort implements SortAlgorithm {
                 arr.set(k, temp[i++]);
             }
         }
+        arr.mark("merge " + lo + "-" + hi);
     }
 }
