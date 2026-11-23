@@ -41,6 +41,27 @@ public class HeapSort implements SortAlgorithm {
     @Override
     public void sort(SortArray arr) {
         // TODO: write heapsort here (add a sink helper method below)
+        int n = arr.size();
+        for (int k = n / 2 - 1; k >= 0; k--) {
+            sink(arr, k, n);
+        }
+        for (int end = n - 1; end > 0; end--) {
+            arr.swap(0, end);
+            sink(arr, 0, end);
+        }
+    }
 
+    private void sink(SortArray arr, int k, int size) {
+        while (2 * k + 1 < size) {
+            int child = 2 * k + 1;
+            if (child + 1 < size && arr.less(child, child + 1)) {
+                child++;
+            }
+            if (!arr.less(k, child)) {
+                break;
+            }
+            arr.swap(k, child);
+            k = child;
+        }
     }
 }
