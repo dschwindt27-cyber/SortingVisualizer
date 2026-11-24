@@ -79,8 +79,8 @@ public class SortVisualizer extends JFrame {
         return list;
     }
 
-    private static final int MAX_ITEMS = 100;
-    private static final int MAX_STEPS = 40000;
+    private static final int MAX_ITEMS = 1000;
+    private static final int MAX_STEPS = 4000000;
     private static final long TIMEOUT_MS = 3000;
     private static final String[] PATTERNS = { "Random", "Already sorted", "Reversed", "Nearly sorted", "Few unique values" };
 
